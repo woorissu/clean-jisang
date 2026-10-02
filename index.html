@@ -100,10 +100,11 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 @media print{.metrics{grid-template-columns:140px minmax(0,1fr) 220px}.metric-links{grid-column:auto}.metric-links #quickLinks{display:block}}
 .metric-links[data-placement="below-library"]{margin-top:24px}
 .channel-link:disabled{width:100%;opacity:1;cursor:default;background:var(--surface);filter:none;text-align:left}
-.date.date-diagonal{position:relative;display:block;flex:0 0 56px;width:56px;height:56px;font-variant-numeric:tabular-nums;line-height:1}
-.date-diagonal .date-month{position:absolute;top:2px;left:0;font-size:20px;font-weight:500;color:var(--muted);letter-spacing:-.05em}
+.date.date-diagonal{position:relative;display:block;flex:0 0 56px;width:56px;height:56px;font-family:"Batang","바탕","Noto Serif KR",Georgia,serif;font-variant-numeric:tabular-nums;line-height:1}
+.date-diagonal .date-month,.date-diagonal .date-day{position:absolute;font-size:20px;font-weight:500;color:var(--muted);letter-spacing:-.05em}
+.date-diagonal .date-month{top:2px;left:0}
 .date-diagonal .date-slash{position:absolute;top:7px;left:26px;width:1px;height:42px;background:var(--line);transform:rotate(35deg)}
-.date-diagonal .date-day{position:absolute;right:0;bottom:1px;font-size:25px;font-weight:600;color:var(--ink);letter-spacing:-.05em}
+.date-diagonal .date-day{right:0;bottom:1px}
 </style>
 </head><body>
 <svg class="defs" aria-hidden="true"><defs>

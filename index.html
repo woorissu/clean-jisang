@@ -82,7 +82,8 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 .footer-note>svg{width:16px;height:16px;margin:0;flex-shrink:0}
 .footer-note h2{font-size:12px;font-weight:650;white-space:nowrap;flex-shrink:0}
 .footer-note p{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
-.footer-note .notice{display:block;margin-top:5px;font-size:11px;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+.footer-note p{word-break:keep-all;overflow-wrap:anywhere}
+.footer-note .notice-divider{margin:0 9px;color:#b5bfb1;font-weight:400}
 .report-footer .footer{padding-top:20px}
 @media(max-width:740px){.library-tabs{padding-left:20px;padding-right:20px}.filter-panel{padding:18px 20px}}
 @media(max-width:560px){.filter-panel .filter-row{grid-template-columns:1fr}.footer-note{display:grid;grid-template-columns:16px minmax(0,1fr);gap:4px 10px;padding:12px 15px}.footer-note p{grid-column:2}.footer-note h2{white-space:normal}.library-tabs{padding-left:18px;padding-right:18px}}
@@ -150,7 +151,7 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 </div>
 <div class="results-meta"><span id="resultsText" aria-live="polite">발행 내역을 확인하고 있어요</span><label><span class="sr-only">게시물 정렬</span><select id="sort"><option value="desc">최신순</option><option value="asc">오래된순</option></select></label></div>
 <div id="posts" aria-busy="true"></div><div class="list-end" id="listEnd" hidden><span id="endText"></span><button class="btn" id="more" hidden>게시물 더 보기</button></div></section>
-</div><footer class="report-footer"><section class="panel note footer-note"><svg aria-hidden="true"><use href="#info"/></svg><h2>새로운 소식은 이곳에서</h2><p>최신 발행 내역은 상단의 새로고침으로 확인해 주세요.<span class="notice">계약된 컨텐츠 발행수만큼 작성됩니다. 이 상품은 상위랭크 보장형이 아니므로 참고바랍니다.</span></p></section><div class="footer"><span>클린지상주의 콘텐츠 운영 리포트</span><span class="agency-credit">BY NEXTPHOENIX</span></div></footer>
+</div><footer class="report-footer"><section class="panel note footer-note"><svg aria-hidden="true"><use href="#info"/></svg><h2>새로운 소식은 이곳에서</h2><p>최신 발행 내역은 상단의 새로고침으로 확인해 주세요.<span class="notice-divider" aria-hidden="true">|</span>계약된 컨텐츠 발행수만큼 작성됩니다.<span class="notice-divider" aria-hidden="true">|</span>이 상품은 상위랭크 보장형이 아니므로 참고바랍니다.</p></section><div class="footer"><span>클린지상주의 콘텐츠 운영 리포트</span><span class="agency-credit">BY NEXTPHOENIX</span></div></footer>
 </main></div>
 <script>
 'use strict';

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>클린지상주의 · 콘텐츠 리포트</title>
+<style>
+:root{--bg:#f5f6f1;--surface:#fff;--ink:#243e32;--muted:#7c887e;--line:#e3e8df;--soft:#ecf1e6;--green:#346b4b;--hero:#203f30;--accent:#d4eaa4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;letter-spacing:-.025em}button,input,select{font:inherit;color:inherit}button,a{touch-action:manipulation}button{cursor:pointer;border:0}button:disabled{opacity:.5;cursor:wait}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.4}button,input,select{min-height:40px}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #88b87c;outline-offset:3px}[hidden]{display:none!important}svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;vertical-align:middle}.defs{position:absolute;width:0;height:0;overflow:hidden}.layout{display:grid;grid-template-columns:205px minmax(0,1fr);max-width:1480px;margin:auto;min-height:100vh}.rail{padding:36px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:48px;height:100vh;position:sticky;top:0}.brand{display:flex;gap:10px;align-items:center}.logo{background:var(--green);color:#eef6de;border-radius:12px;width:37px;height:40px;display:grid;place-items:center}.logo svg{width:23px;height:23px}.brand strong{font-size:17px;letter-spacing:-.07em}.brand small{display:block;font-size:8px;letter-spacing:.13em;color:var(--muted);margin-top:3px}.nav-label,.eyebrow{font-size:10px;font-weight:600;letter-spacing:.16em;color:var(--muted)}.nav-link{margin-top:14px;display:flex;align-items:center;gap:10px;padding:12px;background:var(--soft);color:var(--green);border-radius:10px;font-size:12px;font-weight:650}.rail-footer{margin-top:auto;font-size:11px;line-height:1.9;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}.rail-footer b{display:block;color:var(--ink);font-size:10px;letter-spacing:.08em;margin-bottom:8px}main{padding:30px 40px;min-width:0}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}.breadcrumb{font-size:11px;color:var(--muted)}.breadcrumb span{margin:0 10px;color:#b5bfb1}.breadcrumb b{font-weight:500;color:var(--ink)}.actions{display:flex;gap:8px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:8px 13px;background:var(--surface);border:1px solid var(--line);border-radius:10px;font-size:11px;font-weight:600}.btn:hover{background:var(--soft)}.btn.icon{width:40px;padding:8px}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}.hero{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:220px;border-radius:22px;background:var(--hero);color:white;padding:34px 38px}.hero .eyebrow{color:#bfd39f;font-size:9px;letter-spacing:.22em}.hero h1{font-size:32px;font-weight:600;line-height:1.4;letter-spacing:-.06em;margin:14px 0 10px}.hero p{font-size:12px;color:#b9cdbd}.hero-art{position:relative;display:grid;place-items:center;width:180px;height:160px;flex-shrink:0;margin-right:10px}.hero-art:before,.hero-art:after{content:"";position:absolute;width:174px;height:174px;border:1px solid #a1bd8c55;border-radius:50%;transform:rotate(-25deg) scaleX(.64)}.hero-art:after{transform:rotate(35deg) scaleX(.64);width:198px;height:198px}.hero-art svg{width:50px;height:50px;stroke-width:.85;color:var(--accent)}.hero-art small{position:absolute;bottom:-7px;font-size:8px;letter-spacing:.2em;color:#b3c8ad}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:26px 0 13px}.section-heading h2{font-size:15px;font-weight:600}.sync{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:7px}.sync:before{content:"";width:6px;height:6px;border-radius:50%;background:#b0bd9b}.sync[data-state="ok"]:before{background:#6d9a69}.sync[data-state="error"]:before{background:#c88857}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{padding:19px 20px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}.metric:first-child{background:#e8efdf;border-color:#dce6d1}.metric-label{font-size:11px;color:var(--muted);display:flex;align-items:center;justify-content:space-between}.metric-label svg{width:16px;height:16px;color:#93a28e}.metric-value{font-size:31px;font-weight:600;letter-spacing:-.055em;margin-top:10px;line-height:1.45;min-height:45px}.metric-value small{font-size:11px;font-weight:400;margin-left:5px;color:var(--muted)}.metric p{font-size:9px;color:var(--muted);margin-top:4px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:20px;margin-top:24px;align-items:start}.panel{border:1px solid var(--line);background:var(--surface);border-radius:20px;overflow:hidden}.panel-heading{padding:23px 24px 17px;display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-heading h2{font-size:17px;letter-spacing:-.055em;font-weight:650}.panel-heading p{font-size:10px;color:var(--muted);margin-top:5px}.badge{font-size:9px;font-weight:600;color:var(--green);background:var(--soft);border-radius:6px;padding:4px 8px}.filters{padding:0 24px 18px;border-bottom:1px solid var(--line)}.tabs{display:flex;gap:4px;background:var(--bg);border-radius:10px;padding:4px;margin-bottom:14px}.tab{background:transparent;color:var(--muted);min-height:33px;flex:1;font-size:11px;padding:5px 7px;border-radius:7px;white-space:nowrap}.tab[aria-pressed="true"]{background:var(--surface);color:var(--ink);font-weight:650;box-shadow:0 2px 6px #203b2010}.tab small{font-size:9px;margin-left:5px;color:var(--muted)}.filter-row{display:flex;gap:9px}input,select{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:9px;padding:8px 10px;min-width:0;max-width:100%;font-size:11px}.search{position:relative;flex:1;min-width:120px}.search input{width:100%;padding-left:34px}.search svg{position:absolute;left:11px;top:12px;width:15px;height:15px;color:var(--muted)}details{margin-top:12px}summary{cursor:pointer;font-size:10px;color:var(--muted);display:inline-flex;align-items:center;gap:5px;list-style:none}summary::-webkit-details-marker{display:none}summary svg{width:12px;height:12px}details[open] summary svg{transform:rotate(180deg)}.advanced{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.advanced label{display:flex;flex-direction:column;gap:5px;flex:1;min-width:105px;color:var(--muted);font-size:10px}.advanced input{width:100%}.advanced .btn{align-self:flex-end;min-height:38px}.results-meta{display:flex;justify-content:space-between;align-items:center;padding:13px 24px 6px;color:var(--muted);font-size:10px}.results-meta b{color:var(--ink)}.results-meta select{border:0;min-height:30px;padding:4px;font-size:10px}.month-heading{padding:12px 24px 5px;font-size:10px;color:var(--muted);display:flex;gap:12px;align-items:center}.month-heading:after{content:"";flex:1;height:1px;background:var(--line)}.post{display:flex;align-items:center;gap:14px;padding:18px 24px}.post+.post{border-top:1px solid var(--line)}.post:hover{background:var(--bg)}.date{flex:0 0 36px;text-align:center;color:var(--muted);font-size:9px;line-height:1.5}.date strong{display:block;font-size:24px;font-weight:500;color:var(--ink);letter-spacing:-.05em}.post-copy{flex:1;min-width:0}.post-labels{display:flex;gap:8px;align-items:center;margin-bottom:5px}.platform{font-size:9px;color:var(--green);font-weight:650}.platform:before{content:"";display:inline-block;background:currentColor;width:5px;height:5px;border-radius:50%;margin-right:5px}.post-labels small{font-size:9px;color:var(--muted)}.post-title{font-size:13px;font-weight:600;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}.post-host{display:block;color:var(--muted);font-size:9px;margin-top:5px}.arrow{width:27px;height:27px;flex-shrink:0;display:grid;place-items:center;border-radius:50%;background:var(--bg);color:var(--muted)}.arrow svg{width:13px;height:13px}.post:hover .arrow{background:var(--green);color:white}.list-end{border-top:1px solid var(--line);text-align:center;padding:17px 24px;font-size:10px;color:var(--muted)}.list-end .btn{width:100%}.sidepanels{display:flex;flex-direction:column;gap:16px}.sidepanels .panel{padding:23px}.sidepanels h2{font-size:13px;font-weight:650}.sub{font-size:10px;color:var(--muted);margin-top:5px}.bar{display:flex;height:8px;border-radius:6px;overflow:hidden;gap:3px;background:var(--soft);margin:24px 0 18px}.channel-row{display:flex;align-items:center;justify-content:space-between;margin:13px 0;font-size:11px}.channel-row i{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:8px}.channel-row small{font-size:10px;color:var(--muted);margin-left:4px}.side-note{font-size:9px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line);margin-top:17px;line-height:1.9}.channel-link{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:9px;padding:11px;margin-top:10px;font-size:11px}.channel-link svg{width:13px;height:13px}.channel-link:hover{background:var(--soft)}.note{background:var(--soft)!important;border-color:transparent!important}.note svg{margin-bottom:13px;color:var(--green)}.note p{font-size:11px;line-height:1.9;color:var(--muted);margin-top:9px}.footer{display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:9px;padding:26px 0 5px}.footer b{letter-spacing:.12em;font-size:8px}.state{padding:45px 24px;text-align:center;max-width:470px;margin:auto}.state-icon{width:44px;height:44px;border-radius:13px;background:var(--soft);color:var(--green);display:grid;place-items:center;margin:0 auto 17px}.state h3{font-size:15px}.state p{font-size:11px;color:var(--muted);line-height:1.9;margin:10px 0 19px}.warning{margin-top:17px;padding:12px 16px;border:1px solid #e9d8bb;border-radius:12px;background:#fff5e7;color:#805b3b;font-size:11px}.skeleton{padding:19px 24px;border-top:1px solid var(--line)}.skeleton i{display:block;height:12px;background:var(--soft);border-radius:4px;margin:11px 0;animation:pulse 1.4s infinite}.skeleton i:first-child{width:25%;height:8px}.skeleton i:last-child{width:45%;height:8px}@keyframes pulse{50%{opacity:.35}}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+[data-theme="dark"]{--bg:#18221a;--surface:#202d22;--ink:#e0e9dc;--muted:#99a791;--line:#344335;--soft:#2b402d;--green:#9cc39a;--hero:#284330}[data-theme="dark"] .metric:first-child{background:#30472c;border-color:#40583a}[data-theme="dark"] .logo,[data-theme="dark"] .btn.primary{background:#476d45;color:#fff}[data-theme="dark"] .warning{background:#3e3220;border-color:#605238;color:#edd3a4}
+@media(min-width:1500px){main{padding:40px 45px}.hero{min-height:240px}}
+@media(max-width:1150px){.layout{grid-template-columns:174px minmax(0,1fr)}.rail{padding:30px 16px}main{padding:27px}.workspace{grid-template-columns:minmax(0,1fr) 220px;gap:16px}.sidepanels .panel{padding:19px}.metric{padding:17px 15px}.hero h1{font-size:29px}.hero-art{width:130px;transform:scale(.85)}}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.rail{position:static;height:auto;flex-direction:row;align-items:center;gap:15px;border-right:0;border-bottom:1px solid var(--line);padding:18px 28px}.rail nav{margin-left:auto}.rail-footer,.nav-label{display:none}.nav-link{margin:0;padding:8px 12px}.workspace{grid-template-columns:minmax(0,1fr) 245px}}
+@media(max-width:740px){main{padding:20px}.hero{padding:28px;min-height:210px}.hero h1{font-size:27px}.hero-art{width:90px;transform:scale(.75)}.metrics{grid-template-columns:repeat(2,1fr)}.metric{padding:17px 20px}.workspace{grid-template-columns:1fr}.sidepanels{display:grid;grid-template-columns:1fr 1fr}.note{grid-column:1/-1}.print-btn{display:none}.topbar{margin-bottom:22px}.section-heading{flex-wrap:wrap}.panel-heading,.filters{padding-left:20px;padding-right:20px}}
+@media(max-width:440px){main{padding:16px}.rail{padding:16px 20px}.brand strong{font-size:16px}.brand small{font-size:7px}.nav-link{font-size:10px}.nav-link svg{display:none}.hero-art{display:none}.hero{padding:27px 24px;min-height:195px}.hero h1{font-size:26px}.hero p{font-size:11px}.breadcrumb span{margin:0 5px}.actions{gap:6px}.actions .btn{padding:8px 10px}.tab{font-size:10px;padding:5px}.filter-row{flex-wrap:wrap}.search{min-width:130px}.post{padding:17px 19px;gap:10px}.post-title{font-size:12px}.sidepanels{grid-template-columns:1fr}.note{grid-column:auto}.footer{flex-direction:column;gap:5px}.metric-value{font-size:29px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{.layout{display:block}.rail,.topbar,.filters,.list-end button,.note{display:none!important}body{background:white;color:#243e32}main{padding:0}.hero{background:#e8efdf;color:#243e32;min-height:140px;print-color-adjust:exact}.hero p,.hero .eyebrow{color:#466246}.hero-art{display:none}.workspace{display:block}.sidepanels{display:grid;grid-template-columns:1fr 1fr;margin-top:18px}.post,.metric{break-inside:avoid}.panel{overflow:visible}.post{padding:13px 22px}.footer{padding-top:18px}}
+.brand{flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.logo,[data-theme="dark"] .logo{width:88px;height:66px;padding:4px;border:1px solid #cad8de;border-radius:12px;background:#fff;box-shadow:0 2px 7px #203e3210;flex-shrink:0;overflow:hidden}
+.logo img{display:block;width:100%;height:100%;object-fit:contain;border-radius:7px}
+@media(max-width:960px){.brand{flex-direction:row;align-items:center;gap:10px}.logo,[data-theme="dark"] .logo{width:58px;height:44px;padding:3px;border-radius:9px}}
+@media(max-width:440px){.brand{gap:8px}.brand strong{font-size:14px}.brand small{font-size:6px}.logo,[data-theme="dark"] .logo{width:50px;height:39px}.rail{gap:10px}.nav-link{padding:8px}}
+/* Readable report typography and agency signature. */
+body{font-size:16px}
+.breadcrumb,.btn{font-size:13px}.btn{min-height:44px;padding:10px 15px}.btn.icon{width:44px}
+.brand strong{font-size:19px}.brand small{font-size:9px}.nav-label{font-size:11px}.nav-link{font-size:14px}
+.hero .eyebrow{font-size:11px}.hero h1{font-size:35px}.hero p{font-size:15px}.hero-art small{font-size:10px}
+.section-heading h2{font-size:18px}.sync{font-size:12px}
+.metric-label{font-size:14px}.metric-value{font-size:35px}.metric-value small{font-size:13px}.metric p{font-size:12px}
+.panel-heading h2{font-size:21px}.panel-heading p{font-size:13px}.badge{font-size:12px}
+.tabs{gap:6px;padding:6px;border-radius:13px;margin-bottom:18px}
+.tab{font-size:15px;font-weight:600;min-height:50px;padding:10px 12px;border-radius:9px}
+.tab small{font-size:12px;margin-left:6px}.tab[aria-pressed="true"]{color:var(--green);box-shadow:0 2px 8px #203b2014;outline:1px solid var(--line)}
+input,select{font-size:14px;min-height:44px}.search input{padding-left:37px}.search svg{top:14px;width:17px;height:17px}
+summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{gap:12px}.advanced .btn{min-height:44px}
+.results-meta,.results-meta select{font-size:13px}.month-heading{font-size:13px;padding-top:18px}
+.post{padding-top:21px;padding-bottom:21px}.date{font-size:12px;flex-basis:42px}.date strong{font-size:28px}
+.platform,.post-labels small{font-size:12px}.post-title{font-size:16px;line-height:1.75}.post-host{font-size:12px}.arrow{width:31px;height:31px}
+.list-end{font-size:12px}.sidepanels h2{font-size:16px}.sub{font-size:12px}.channel-row{font-size:14px}.channel-row small{font-size:12px}
+.side-note{font-size:12px}.channel-link{font-size:14px;padding:13px}.note p{font-size:14px}.warning{font-size:14px}
+.state h3{font-size:19px}.state p{font-size:14px}.footer{align-items:center;font-size:12px;padding-top:30px}
+.rail-footer{padding-top:22px}.agency-signature{display:flex;flex-direction:column;align-items:flex-start;gap:13px}
+.agency-caption,.agency-credit{font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.agency-signature img{display:block;width:135px;height:auto;max-width:100%;background:transparent}
+.agency-credit{white-space:nowrap}
+@media(min-width:961px){.layout{grid-template-columns:220px minmax(0,1fr)}}
+@media(max-width:1150px) and (min-width:741px){.tab{padding:10px 8px;font-size:14px}.tab small{margin-left:4px}}
+@media(max-width:740px){.hero h1{font-size:30px}.hero p{font-size:14px}.brand strong{font-size:18px}.metric-value{font-size:33px}.sidepanels h2{font-size:17px}.footer{flex-wrap:wrap}}
+@media(max-width:560px){.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.tab{min-height:48px;font-size:15px}.tab small{font-size:12px}.filter-row{flex-wrap:wrap}.filter-row>label:first-child{flex:1}.filter-row select{width:100%}.search{flex-basis:100%}.section-heading{align-items:flex-start}.footer{align-items:flex-start;flex-direction:column;gap:14px}.hero .eyebrow{font-size:10px}.brand strong{font-size:16px}.brand small{font-size:8px}.nav-link{font-size:12px}.breadcrumb{font-size:12px}.actions .btn{font-size:12px;padding:8px 10px}.actions .btn.icon{width:40px}.post-title{font-size:15px}.metric-label{font-size:13px}.metric p{font-size:11px}}
+@media print{.hero h1{font-size:28px}.metric-value{font-size:28px}.post-title{font-size:14px}}
+.metrics{grid-template-columns:minmax(170px,.8fr) minmax(0,2.2fr);align-items:stretch}
+.metric-total{display:flex;flex-direction:column;justify-content:center}.metric-total .metric-value{font-size:44px;margin-top:12px}
+.metric-channels h2{font-size:16px;font-weight:650}.metric-channels .sub{font-size:12px}
+.metric-channels .bar{height:6px;margin:15px 0 17px}
+.metric-channels #channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.metric-channels .channel-row{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}
+.metric-channels .channel-row>span:first-child{display:flex;align-items:center;gap:7px;font-size:13px;white-space:nowrap}
+.metric-channels .channel-row b{font-size:24px;font-weight:600}.metric-channels .channel-row small{font-size:12px}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.tab{display:flex;align-items:center;justify-content:center;gap:7px}.tab small{margin-left:0}
+.channel-icon{width:18px;height:18px;flex-shrink:0}.channel-icon-blog{color:#299657}.channel-icon-instagram{color:#d62976}.channel-icon-facebook{color:#0866ff}
+.channel-link-label{display:inline-flex;align-items:center;gap:10px}.channel-link .channel-icon{width:19px;height:19px}
+.sidepanels .note{padding:16px 18px}.sidepanels .note>svg{width:15px;height:15px;margin-bottom:7px}.sidepanels .note h2{font-size:13px}.sidepanels .note p{font-size:12px;line-height:1.75;margin-top:6px}
+@media(max-width:1150px) and (min-width:741px){.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.metrics{grid-template-columns:1fr}.metric-total{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center}.metric-total .metric-label{justify-content:flex-start;gap:10px}.metric-total .metric-value{grid-column:2;grid-row:1/3;font-size:38px;margin:0}.metric-total p{grid-column:1}.metric-channels #channels{gap:9px}.metric-channels .channel-row>span:first-child{font-size:12px;gap:5px}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Separate report controls, content, and compact footer notice. */
+.agency-caption{display:inline-flex;align-items:center;gap:7px;letter-spacing:.06em}
+.agency-home{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;font-size:16px;letter-spacing:0;color:var(--muted)}
+.agency-home:hover{background:var(--soft);color:var(--green)}
+.filter-panel{margin-top:22px;padding:20px 24px}
+.filter-panel h2{font-size:15px;font-weight:650;margin-bottom:13px}
+.filter-panel .filter-row{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr);gap:12px}
+.filter-panel .filter-row select{width:100%}
+.filter-panel details{margin-top:11px}.filter-panel .advanced{padding-top:8px}
+.library-tabs{padding:0 24px 8px;border-bottom:1px solid var(--line)}
+.library-tabs .tabs{margin-bottom:10px}
+.report-footer{margin-top:22px}
+.footer-note{display:flex;align-items:center;gap:12px;padding:13px 18px;border-radius:12px}
+.footer-note>svg{width:16px;height:16px;margin:0;flex-shrink:0}
+.footer-note h2{font-size:12px;font-weight:650;white-space:nowrap;flex-shrink:0}
+.footer-note p{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
+.report-footer .footer{padding-top:20px}
+@media(max-width:740px){.library-tabs{padding-left:20px;padding-right:20px}.filter-panel{padding:18px 20px}}
+@media(max-width:560px){.filter-panel .filter-row{grid-template-columns:1fr}.footer-note{display:grid;grid-template-columns:16px minmax(0,1fr);gap:4px 10px;padding:12px 15px}.footer-note p{grid-column:2}.footer-note h2{white-space:normal}.library-tabs{padding-left:18px;padding-right:18px}}
+@media print{.filter-panel,.library-tabs,.footer-note{display:none!important}.report-footer{margin-top:10px}}
+/* Three-card summary and single-line agency signature. */
+.rail-footer{margin-inline:-6px}
+.agency-signature{flex-direction:row;align-items:flex-end;gap:7px;flex-wrap:nowrap}
+.agency-caption{font-size:10px;gap:3px;letter-spacing:0;white-space:nowrap;flex-shrink:0;line-height:1;align-items:baseline}
+.agency-home{width:20px;height:auto;line-height:1;font-size:15px}
+.agency-signature img{width:112px;min-width:0;flex:0 1 112px;height:auto}
+.metrics{grid-template-columns:clamp(140px,13vw,170px) minmax(0,1fr) clamp(220px,22vw,250px)}
+.metric-channels{display:flex;flex-direction:column;justify-content:center}
+.metric-links h2{font-size:16px;font-weight:650}.metric-links .sub{font-size:12px;margin-top:5px}
+.metric-links .channel-link{padding:11px 12px}
+.workspace{grid-template-columns:minmax(0,1fr)}
+.library-tabs .tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:740px){.metrics{grid-template-columns:minmax(140px,.65fr) minmax(0,1.65fr)}.metric-links{grid-column:1/-1}.metric-links #quickLinks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.metric-links .channel-link{font-size:13px}.metric-links .channel-link-label{gap:7px}}
+@media(max-width:560px){.metrics{grid-template-columns:1fr}.metric-links{grid-column:auto}.metric-links #quickLinks{grid-template-columns:1fr}.library-tabs .tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media print{.metrics{grid-template-columns:140px minmax(0,1fr) 220px}.metric-links{grid-column:auto}.metric-links #quickLinks{display:block}}
+.metric-links[data-placement="below-library"]{margin-top:24px}
+</style>
+</head><body>
+<svg class="defs" aria-hidden="true"><defs>
+<symbol id="leaf" viewBox="0 0 24 24"><path d="M20 4c-1 8-1 14-8 15-5 1-9-6-4-10 3-3 7-2 12-5ZM5 21 16 10"/></symbol>
+<symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+<symbol id="refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M6 6a8 8 0 0 1 14 6M18 18A8 8 0 0 1 4 12"/></symbol>
+<symbol id="moon" viewBox="0 0 24 24"><path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10Z"/></symbol>
+<symbol id="print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/></symbol>
+<symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+<symbol id="chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+<symbol id="file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8ZM14 3v6h5M8 13h8M8 17h5"/></symbol>
+<symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18M8 15h2M14 15h2"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+<symbol id="brand-blog" viewBox="0 0 24 24"><path d="M6 3h12a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-5l-5 3v-3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/><path d="M9 7v8M9 12a3 3 0 1 1 3 3H9"/></symbol>
+<symbol id="brand-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></symbol>
+<symbol id="brand-facebook" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M14 21v-8h3l.5-3H14V8.5c0-1 .4-1.5 1.5-1.5H18V4h-2.5C12.5 4 11 5.5 11 8v2H9v3h2v8" fill="currentColor" stroke="none"/></symbol>
+</defs></svg>
+<div class="layout">
+<aside class="rail"><div class="brand"><span class="logo"><img src="./size-logo.png" width="800" height="597" alt="클린지상주의 로고"></span><div><strong>클린지상주의</strong><small>CONTENT PARTNERSHIP</small></div></div><nav aria-label="보고서 메뉴"><p class="nav-label">WORKSPACE</p><a class="nav-link" href="#report" aria-current="page"><svg aria-hidden="true"><use href="#grid"/></svg>콘텐츠 리포트</a></nav><div class="rail-footer"><div class="agency-signature"><span class="agency-caption">제작 · 제공 <a class="agency-home" href="https://nextphoenix.co.kr" target="_blank" rel="noopener noreferrer" aria-label="넥스트피닉스 홈페이지 · 새 탭" title="넥스트피닉스 홈페이지">↗</a></span><img src="./assets/next-phoenix-logo.png" width="538" height="238" alt="NEXT PHOENIX"></div></div></aside>
+<main id="report">
+<div class="topbar"><div class="breadcrumb">클린지상주의<span>/</span><b>운영 리포트</b></div><div class="actions"><button class="btn icon" id="themeButton" aria-label="다크 모드로 전환"><svg aria-hidden="true"><use href="#moon"/></svg></button><button class="btn print-btn" id="printButton"><svg aria-hidden="true"><use href="#print"/></svg>인쇄 / PDF</button><button class="btn" id="refreshButton"><svg aria-hidden="true"><use href="#refresh"/></svg>새로고침</button></div></div>
+<header class="hero"><div><div class="eyebrow">CLEAN JISANG · CONTENT REPORT</div><h1>차곡차곡 쌓이는<br>우리 브랜드의 이야기.</h1><p>클린지상주의의 콘텐츠 발행 내역을 한눈에 확인하세요.</p></div><div class="hero-art" aria-hidden="true"><svg><use href="#leaf"/></svg><small>GROWING TOGETHER</small></div></header>
+<div class="section-heading"><h2 id="summaryTitle">콘텐츠 발행 요약</h2><div class="sync" id="sync" role="status" data-state="loading">최신 내역 연결 중</div></div>
+<div class="metrics" id="summaryCards" aria-label="조회 기간의 전체 채널 현황">
+<section class="metric metric-total"><div class="metric-label">전체 발행<svg aria-hidden="true"><use href="#file"/></svg></div><div class="metric-value"><span id="total">—</span><small>건</small></div><p>조회 기간 · 전체 채널</p></section>
+<section class="metric metric-channels"><h2>채널별 발행 현황</h2><p class="sub">조회 기간 · 발행 건수 기준</p><div class="bar" id="bar" aria-hidden="true"></div><div id="channels"><p class="sub">데이터 연결 중</p></div></section>
+<section class="metric metric-links" id="channelLinksCard"><h2>운영 채널 바로가기</h2><p class="sub">브랜드의 이야기를 이어가는 공간</p><div id="quickLinks"><p class="sub">데이터 연결 중</p></div></section>
+</div><div class="warning" id="warning" role="alert" hidden></div>
+<section class="panel filter-panel" id="filters" aria-labelledby="filterTitle"><h2 id="filterTitle">조회 조건</h2>
+<div class="filter-row"><label><span class="sr-only">조회 월</span><select id="month"><option value="">전체 기간</option></select></label><label class="search"><svg aria-hidden="true"><use href="#search"/></svg><span class="sr-only">제목 또는 링크 검색</span><input id="searchInput" type="search" placeholder="제목이나 링크로 검색" autocomplete="off"></label></div>
+<details><summary>기간 · 주차 상세 설정<svg aria-hidden="true"><use href="#chevron"/></svg></summary><div class="advanced"><label>빠른 선택<select id="preset"><option value="">직접 선택</option><option value="last7">최근 7일</option><option value="thisMonth">이번 달</option><option value="prevMonth">지난달</option></select></label><label>주차<select id="week"><option value="">전체 주차</option><option value="1">1주차</option><option value="2">2주차</option><option value="3">3주차</option><option value="4">4주차</option><option value="5">5주차</option><option value="6">6주차</option></select></label><label>시작일<input id="start" type="date"></label><label>종료일<input id="end" type="date"></label><button class="btn" id="reset">필터 초기화</button></div></details>
+</section>
+<div class="workspace" id="contentLibrary">
+<section class="panel"><div class="panel-heading"><div><h2>콘텐츠 라이브러리</h2><p>게시물을 선택하면 원문으로 이동합니다.</p></div><span class="badge">발행 기록</span></div>
+<div class="library-tabs"><div class="tabs" role="group" aria-label="채널 선택"><button class="tab" data-channel="all" aria-pressed="false"><svg class="channel-icon" aria-hidden="true"><use href="#grid"/></svg>전체<small id="nAll"></small></button><button class="tab" data-channel="블로그" aria-pressed="true"><svg class="channel-icon channel-icon-blog" aria-hidden="true"><use href="#brand-blog"/></svg>블로그<small id="nBlog"></small></button><button class="tab" data-channel="인스타" aria-pressed="false"><svg class="channel-icon channel-icon-instagram" aria-hidden="true"><use href="#brand-instagram"/></svg>인스타<small id="nInsta"></small></button><button class="tab" data-channel="페북" aria-pressed="false"><svg class="channel-icon channel-icon-facebook" aria-hidden="true"><use href="#brand-facebook"/></svg>페이스북<small id="nFb"></small></button></div>
+</div>
+<div class="results-meta"><span id="resultsText" aria-live="polite">발행 내역을 확인하고 있어요</span><label><span class="sr-only">게시물 정렬</span><select id="sort"><option value="desc">최신순</option><option value="asc">오래된순</option></select></label></div>
+<div id="posts" aria-busy="true"></div><div class="list-end" id="listEnd" hidden><span id="endText"></span><button class="btn" id="more" hidden>게시물 더 보기</button></div></section>
+</div><footer class="report-footer"><section class="panel note footer-note"><svg aria-hidden="true"><use href="#info"/></svg><h2>새로운 소식은 이곳에서</h2><p>최신 발행 내역은 상단의 새로고침으로 확인해 주세요.</p></section><div class="footer"><span>클린지상주의 콘텐츠 운영 리포트</span><span class="agency-credit">BY NEXTPHOENIX</span></div></footer>
+</main></div>
+<script>
+'use strict';
+const SHEET_ID='1qdBMfG2TC4ZZzL9GMB337Wn5WSbPE4GBoJfPVJKhqvE', GID='1802451476';
+const BASE=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq`;
+const $=id=>document.getElementById(id);
+const CHANNELS={'블로그':{label:'블로그',color:'#73966a'},'인스타':{label:'인스타그램',color:'#d62976'},'페북':{label:'페이스북',color:'#0866ff'}};
+function channelIcon(label){const icon=({'블로그':'blog','인스타':'instagram','인스타그램':'instagram','페북':'facebook','페이스북':'facebook'})[label];return icon?`<svg class="channel-icon channel-icon-${icon}" aria-hidden="true"><use href="#brand-${icon}"/></svg>`:'<svg class="channel-icon" aria-hidden="true"><use href="#file"/></svg>';}
+let records=[],quickLinks=[],channel='블로그',filtered=[],limit=12,loaded=false,busy=false,lastLoaded=null;
+const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function safeUrl(value){try{const u=new URL(String(value).trim());return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}}
+function iso(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function normalizeDate(value){
+ const s=String(value??'').trim(),g=s.match(/^Date\((\d{4}),(\d{1,2}),(\d{1,2})(?:,.*)?\)$/);
+ const m=g?[g[0],g[1],String(+g[2]+1),g[3]]:s.match(/^(\d{4})\s*[-./년]\s*(\d{1,2})\s*[-./월]\s*(\d{1,2})(?:\s*[.일])?\s*$/);
+ if(!m)return '';const d=new Date(+m[1],+m[2]-1,+m[3]);return d.getFullYear()===+m[1]&&d.getMonth()+1===+m[2]&&d.getDate()===+m[3]?iso(d):'';
+}
+function weekOf(date){const [y,m,d]=date.split('-').map(Number);return Math.ceil((d+(new Date(y,m-1,1).getDay()+6)%7)/7);}
+function parseCSV(text){
+ const rows=[];let row=[],cell='',quoted=false;
+ for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){row.push(cell);cell='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(cell);rows.push(row);row=[];cell='';}else cell+=c;}
+ if(quoted)throw new Error('FORMAT');if(cell||row.length){row.push(cell);rows.push(row);}return rows;
+}
+function mapRows(raw){
+ const header=(raw[0]||[]).map(x=>String(x).replace(/^\uFEFF/,'').trim()),indices=['업로드날짜','플랫폼','주제','링크'].map(label=>header.indexOf(label));
+ if(indices.some(i=>i<0))throw new Error('HEADERS');
+ const data=raw.slice(1).map((row,index)=>{
+  const [rawDate,rawPlatform,title,rawUrl]=indices.map(i=>String(row[i]??'').trim());if(![rawDate,rawPlatform,title,rawUrl].some(Boolean))return null;
+  return {date:normalizeDate(rawDate),platform:({'인스타그램':'인스타','페이스북':'페북'})[rawPlatform]||rawPlatform||'기타',title,url:safeUrl(rawUrl),invalidUrl:!!rawUrl&&!safeUrl(rawUrl),row:index+2};
+ }).filter(Boolean);
+ const links=['블로그','인스타그램','페이스북'].map((label,i)=>({label,url:safeUrl(raw[i+1]?.[4])})).filter(x=>x.url);
+ return {data,links};
+}
+function tableRows(response){
+ if(!['ok','warning'].includes(response?.status)||!response.table)throw new Error('ACCESS');
+ const t=response.table;return [t.cols.map(c=>c.label||''),...t.rows.map(row=>t.cols.map((_,i)=>{const c=row.c[i];if(!c)return '';return typeof c.v==='string'&&/^Date\(/.test(c.v)?normalizeDate(c.v):String(c.f??c.v??'');}))];
+}
+async function readCSV(){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);
+ try{const url=new URL(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/export`);url.search=new URLSearchParams({gid:GID,format:'csv',t:String(Date.now())});const res=await fetch(url,{signal:controller.signal,cache:'no-store',credentials:'omit'});if(!res.ok)throw new Error('ACCESS');const text=await res.text();if(/^\s*</.test(text))throw new Error('ACCESS');return mapRows(parseCSV(text));}finally{clearTimeout(timer);}
+}
+function readCallback(){
+ return new Promise((resolve,reject)=>{
+  const name='cleanReport_'+Date.now()+'_'+Math.random().toString(36).slice(2),script=document.createElement('script');let timer;
+  const clean=()=>{clearTimeout(timer);script.remove();delete window[name];};
+  window[name]=response=>{try{const mapped=mapRows(tableRows(response));mapped.usedFallback=true;clean();resolve(mapped);}catch(e){clean();reject(e);}};
+  script.onerror=()=>{clean();reject(new Error('NETWORK'));};timer=setTimeout(()=>{clean();reject(new Error('TIMEOUT'));},12000);
+  const url=new URL(BASE);url.search=new URLSearchParams({gid:GID,headers:'1',tqx:`out:json;responseHandler:${name}`,t:String(Date.now())});script.src=url.href;script.referrerPolicy='no-referrer';document.head.appendChild(script);
+ });
+}
+function periodLabel(){const start=$('start').value,end=$('end').value,m=$('month').value,w=$('week').value;return start||end?`${start||'처음'} ~ ${end||'최근'}`:(m?`${m.slice(0,4)}년 ${+m.slice(5)}월`:'전체 기간')+(w?` · ${w}주차`:'');}
+function periodRows(){const m=$('month').value,w=$('week').value,s=$('start').value,e=$('end').value;if(s&&e&&s>e)return [];return records.filter(r=>s||e?!!r.date&&(!s||r.date>=s)&&(!e||r.date<=e):(!m||(r.date&&r.date.startsWith(m)))&&(!w||(r.date&&weekOf(r.date)===+w)));}
+function renderSummary(period){
+ const c={};period.forEach(r=>c[r.platform]=(c[r.platform]||0)+1);
+ $('summaryTitle').textContent=periodLabel()+' 발행 요약';$('total').textContent=period.length.toLocaleString();
+ [['nAll',period.length],['nBlog',c['블로그']||0],['nInsta',c['인스타']||0],['nFb',c['페북']||0]].forEach(([id,v])=>$(id).textContent=v);
+ const keys=[...Object.keys(CHANNELS),...Object.keys(c).filter(k=>!CHANNELS[k])];
+ $('bar').innerHTML=keys.map(k=>`<span style="width:${period.length?(c[k]||0)/period.length*100:0}%;background:${CHANNELS[k]?.color||'#acb49e'}"></span>`).join('');
+ $('channels').innerHTML=keys.map(k=>`<div class="channel-row"><span>${channelIcon(k)}${esc(CHANNELS[k]?.label||k)}</span><span><b>${c[k]||0}</b><small>건</small></span></div>`).join('');
+}
+function state(title,message,action=''){return `<div class="state"><div class="state-icon"><svg aria-hidden="true"><use href="#file"/></svg></div><h3>${esc(title)}</h3><p>${esc(message)}</p>${action}</div>`;}
+function renderPosts(printAll=false){
+ const shown=printAll?filtered:filtered.slice(0,limit);let lastMonth='',html='';
+ shown.forEach(r=>{
+  const month=r.date?r.date.slice(0,7):'invalid';if(month!==lastMonth){html+=`<div class="month-heading">${r.date?`${r.date.slice(0,4)}년 ${+r.date.slice(5,7)}월`:'날짜 확인 필요'}</div>`;lastMonth=month;}
+  const config=CHANNELS[r.platform]||{},host=r.url?new URL(r.url).hostname.replace(/^www\./,''):r.invalidUrl?'링크 형식 확인 필요':'링크 미등록';
+  const body=`<div class="date">${r.date?`<strong>${r.date.slice(8)}</strong>${+r.date.slice(5,7)}월`:'<strong>—</strong>날짜'}</div><div class="post-copy"><div class="post-labels"><span class="platform" style="color:${config.color||'var(--muted)'}">${esc(config.label||r.platform)}</span><small>${r.date?weekOf(r.date)+'주차':'날짜 확인 필요'}</small></div><div class="post-title">${esc(r.title||'제목 미입력 게시물')}</div><span class="post-host">${esc(host)}</span></div>${r.url?'<span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span>':''}`;
+  html+=r.url?`<a class="post" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(r.title||'제목 미입력 게시물')} · 새 탭에서 원문 보기">${body}</a>`:`<div class="post">${body}</div>`;
+ });
+ if(!shown.length){const reversed=$('start').value&&$('end').value&&$('start').value>$('end').value;html=state(reversed?'조회 기간을 확인해 주세요':'아직 표시할 게시물이 없어요',reversed?'종료일을 시작일 이후로 선택해 주세요.':records.length?'다른 기간이나 채널을 선택하거나 검색어를 지워보세요.':'콘텐츠가 등록되면 이곳에 발행 내역이 표시됩니다.','<button class="btn" id="emptyReset">전체 내역 보기</button>');}
+ $('posts').innerHTML=html;$('posts').setAttribute('aria-busy','false');$('emptyReset')?.addEventListener('click',()=>resetFilters(true));
+ $('listEnd').hidden=!shown.length;$('more').hidden=shown.length>=filtered.length||printAll;$('endText').hidden=!$('more').hidden;$('endText').textContent=`총 ${filtered.length.toLocaleString()}건의 발행 기록을 모두 확인했어요.`;$('more').textContent=`게시물 더 보기 · ${shown.length} / ${filtered.length}`;
+}
+function render(){if(!loaded)return;const period=periodRows();renderSummary(period);const keyword=$('searchInput').value.trim().toLowerCase();filtered=period.filter(r=>(channel==='all'||r.platform===channel)&&(!keyword||`${r.title} ${r.url} ${r.platform}`.toLowerCase().includes(keyword)));filtered.sort((a,b)=>!a.date?(b.date?1:a.row-b.row):!b.date?-1:($('sort').value==='desc'?b.date.localeCompare(a.date):a.date.localeCompare(b.date))||a.row-b.row);$('resultsText').innerHTML=`${esc(channel==='all'?'전체 채널':CHANNELS[channel]?.label||channel)} <b>${filtered.length.toLocaleString()}</b>건${keyword?' · 검색 결과':''}`;renderPosts();}
+function setChannel(value){channel=value;document.querySelectorAll('[data-channel]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.channel===value)));}
+function resetFilters(all=false){['month','week','start','end','preset','searchInput'].forEach(id=>$(id).value='');syncRange();if(all)setChannel('all');limit=12;render();}
+function syncRange(){const hasRange=!!($('start').value||$('end').value);$('month').disabled=hasRange;$('week').disabled=hasRange;}
+function disableFilters(value){document.querySelectorAll('#filters button,#filters input,#filters select,[data-channel],#sort,#printButton').forEach(el=>el.disabled=value);}
+function updateMonths(){const previous=$('month').value,months=[...new Set(records.filter(r=>r.date).map(r=>r.date.slice(0,7)))].sort().reverse();$('month').innerHTML='<option value="">전체 기간</option>'+months.map(m=>`<option value="${m}">${m.slice(0,4)}년 ${+m.slice(5)}월</option>`).join('');$('month').value=loaded?(months.includes(previous)?previous:''):(months[0]||'');}
+function setSync(status,text){$('sync').dataset.state=status;$('sync').textContent=text;}
+function errorMessage(e){return e.message==='HEADERS'?'시트 첫 줄의 업로드날짜, 플랫폼, 주제, 링크 항목을 확인해 주세요.':e.message==='ACCESS'?'시트에 접근할 수 없습니다. 담당자에게 시트 공유 설정 확인을 요청해 주세요.':'구글시트에 연결하지 못했습니다. 인터넷 연결을 확인하고 다시 시도해 주세요. 계속 실패하면 담당자에게 문의해 주세요.';}
+async function loadReport(){
+ if(busy)return;busy=true;$('refreshButton').disabled=true;disableFilters(true);setSync('loading','최신 내역 연결 중');$('warning').hidden=true;
+ if(!loaded){$('posts').innerHTML=Array(3).fill('<div class="skeleton" aria-hidden="true"><i></i><i></i><i></i></div>').join('');$('posts').setAttribute('aria-busy','true');}
+ try{
+  let result;try{result=await readCSV();}catch(first){if(first.message==='HEADERS')throw first;result=await readCallback();}
+  records=result.data;quickLinks=result.links;updateMonths();loaded=true;lastLoaded=new Date();limit=12;render();
+  $('quickLinks').innerHTML=quickLinks.length?quickLinks.map(l=>`<a class="channel-link" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer"><span class="channel-link-label">${channelIcon(l.label)}${esc(l.label)}</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>`).join(''):'<p class="sub" style="margin-top:16px">등록된 채널 주소가 없습니다.</p>';
+  setSync('ok',`${lastLoaded.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})} 불러옴`);
+  const notices=[],invalid=records.filter(r=>!r.date).length;
+  if(invalid)notices.push(`날짜를 확인해야 하는 게시물이 ${invalid}건 있습니다. 전체 기간에서 확인할 수 있어요.`);
+  if(result.usedFallback&&records.some(r=>!r.title))notices.push('일부 제목이 비어 있거나 불러오지 못했습니다. 잠시 후 새로고침해 주세요.');
+  if(notices.length){$('warning').textContent=notices.join(' ');$('warning').hidden=false;}
+ }catch(e){console.error('Report connection failed:',e);setSync('error',loaded?'최신 내역 갱신 실패':'연결을 확인해 주세요');
+  if(loaded){$('warning').textContent=`${lastLoaded.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})}에 불러온 내용을 표시합니다. ${errorMessage(e)}`;$('warning').hidden=false;}
+  else{$('posts').innerHTML=state('보고서를 연결하지 못했어요',errorMessage(e),'<button class="btn primary" id="retry">다시 불러오기</button>');$('posts').setAttribute('aria-busy','false');$('resultsText').textContent='데이터 연결 대기';$('channels').innerHTML='<p class="sub">연결 후 발행 현황이 표시됩니다.</p>';$('quickLinks').innerHTML='<p class="sub">연결 후 채널 주소가 표시됩니다.</p>';$('retry').addEventListener('click',loadReport);}
+ }finally{busy=false;$('refreshButton').disabled=false;disableFilters(!loaded);if(loaded)syncRange();}
+}
+document.querySelectorAll('[data-channel]').forEach(b=>b.addEventListener('click',()=>{setChannel(b.dataset.channel);limit=12;render();}));
+['month','week','sort'].forEach(id=>$(id).addEventListener('change',()=>{limit=12;render();}));$('searchInput').addEventListener('input',()=>{limit=12;render();});
+['start','end'].forEach(id=>$(id).addEventListener('change',()=>{$('preset').value='';syncRange();limit=12;render();}));
+$('preset').addEventListener('change',()=>{const preset=$('preset').value;if(!preset)return;const now=new Date();let start,end;if(preset==='last7'){end=new Date(now);start=new Date(now);start.setDate(start.getDate()-6);}else{const m=now.getMonth()-(preset==='prevMonth'?1:0);start=new Date(now.getFullYear(),m,1);end=new Date(now.getFullYear(),m+1,0);}$('start').value=iso(start);$('end').value=iso(end);syncRange();limit=12;render();});
+$('reset').addEventListener('click',()=>resetFilters());$('refreshButton').addEventListener('click',loadReport);$('more').addEventListener('click',()=>{limit+=12;renderPosts();});
+$('printButton').addEventListener('click',()=>window.print());window.addEventListener('beforeprint',()=>{if(loaded)renderPosts(true);});window.addEventListener('afterprint',()=>{if(loaded)renderPosts();});
+function applyTheme(value){document.documentElement.dataset.theme=value;$('themeButton').setAttribute('aria-label',value==='dark'?'라이트 모드로 전환':'다크 모드로 전환');}
+try{applyTheme(localStorage.getItem('cleanjisang-theme')||'light');}catch{applyTheme('light');}
+$('themeButton').addEventListener('click',()=>{const value=document.documentElement.dataset.theme==='dark'?'light':'dark';applyTheme(value);try{localStorage.setItem('cleanjisang-theme',value);}catch{}});
+function positionChannelLinks(isMobile){
+ const card=$('channelLinksCard');
+ if(isMobile)$('contentLibrary').after(card);else $('summaryCards').append(card);
+ card.dataset.placement=isMobile?'below-library':'summary';
+}
+const mobileLayout=window.matchMedia('(max-width: 740px)');
+positionChannelLinks(mobileLayout.matches);
+mobileLayout.addEventListener('change',event=>positionChannelLinks(event.matches));
+loadReport();
+</script></body></html>

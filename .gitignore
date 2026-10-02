@@ -1,0 +1,10 @@
+# Local history, diagnostics, and captured sheet responses.
+archive/
+tests/
+logo.jpg
+
+# Local environment and OS files.
+.env
+.env.*
+Thumbs.db
+.DS_Store

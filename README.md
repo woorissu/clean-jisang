@@ -34,7 +34,9 @@ node clean-jisang/tests/verify-report.cjs
 - 구글시트 ID: `1qdBMfG2TC4ZZzL9GMB337Wn5WSbPE4GBoJfPVJKhqvE`
 - 클린지상주의 탭: `1802451476`
 - 첫 행: `업로드날짜`, `플랫폼`, `주제`, `링크`
-- E2/E3/E4: 블로그/인스타그램/페이스북 채널 주소
+- 운영 채널 바로가기는 `index.html`의 `OPERATING_CHANNELS`에서 관리합니다. 시트 E2/E3/E4의 이전 주소는 사용하지 않습니다.
+- 블로그: https://blog.naver.com/birdfly200
+- 인스타그램·페이스북은 아이콘과 이름을 표시하고, 주소가 비어 있으면 클릭해도 이동하지 않습니다. 추후 해당 설정의 `url`에 주소를 넣으면 연결됩니다.
 - 화면을 열거나 새로고침 버튼을 누르면 공개된 시트를 읽습니다.
 - 사이트 배포에는 `index.html`, `size-logo.png`, `assets/next-phoenix-logo.png`가 필요합니다. 같은 상대 경로를 유지합니다.
 - `tests`, `archive`, 원본 `logo.jpg`는 사이트 배포에 필요하지 않습니다.

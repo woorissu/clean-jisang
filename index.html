@@ -99,6 +99,7 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 @media(max-width:560px){.metrics{grid-template-columns:1fr}.metric-links{grid-column:auto}.metric-links #quickLinks{grid-template-columns:1fr}.library-tabs .tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media print{.metrics{grid-template-columns:140px minmax(0,1fr) 220px}.metric-links{grid-column:auto}.metric-links #quickLinks{display:block}}
 .metric-links[data-placement="below-library"]{margin-top:24px}
+.channel-link:disabled{width:100%;opacity:1;cursor:default;background:var(--surface);filter:none;text-align:left}
 </style>
 </head><body>
 <svg class="defs" aria-hidden="true"><defs>
@@ -148,7 +149,12 @@ const BASE=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq`;
 const $=id=>document.getElementById(id);
 const CHANNELS={'블로그':{label:'블로그',color:'#73966a'},'인스타':{label:'인스타그램',color:'#d62976'},'페북':{label:'페이스북',color:'#0866ff'}};
 function channelIcon(label){const icon=({'블로그':'blog','인스타':'instagram','인스타그램':'instagram','페북':'facebook','페이스북':'facebook'})[label];return icon?`<svg class="channel-icon channel-icon-${icon}" aria-hidden="true"><use href="#brand-${icon}"/></svg>`:'<svg class="channel-icon" aria-hidden="true"><use href="#file"/></svg>';}
-let records=[],quickLinks=[],channel='블로그',filtered=[],limit=12,loaded=false,busy=false,lastLoaded=null;
+const OPERATING_CHANNELS=[
+ {label:'블로그',url:'https://blog.naver.com/birdfly200'},
+ {label:'인스타그램',url:''},
+ {label:'페이스북',url:''}
+];
+let records=[],channel='블로그',filtered=[],limit=12,loaded=false,busy=false,lastLoaded=null;
 const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 function safeUrl(value){try{const u=new URL(String(value).trim());return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}}
 function iso(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
@@ -170,8 +176,7 @@ function mapRows(raw){
   const [rawDate,rawPlatform,title,rawUrl]=indices.map(i=>String(row[i]??'').trim());if(![rawDate,rawPlatform,title,rawUrl].some(Boolean))return null;
   return {date:normalizeDate(rawDate),platform:({'인스타그램':'인스타','페이스북':'페북'})[rawPlatform]||rawPlatform||'기타',title,url:safeUrl(rawUrl),invalidUrl:!!rawUrl&&!safeUrl(rawUrl),row:index+2};
  }).filter(Boolean);
- const links=['블로그','인스타그램','페이스북'].map((label,i)=>({label,url:safeUrl(raw[i+1]?.[4])})).filter(x=>x.url);
- return {data,links};
+ return {data};
 }
 function tableRows(response){
  if(!['ok','warning'].includes(response?.status)||!response.table)throw new Error('ACCESS');
@@ -226,8 +231,7 @@ async function loadReport(){
  if(!loaded){$('posts').innerHTML=Array(3).fill('<div class="skeleton" aria-hidden="true"><i></i><i></i><i></i></div>').join('');$('posts').setAttribute('aria-busy','true');}
  try{
   let result;try{result=await readCSV();}catch(first){if(first.message==='HEADERS')throw first;result=await readCallback();}
-  records=result.data;quickLinks=result.links;updateMonths();loaded=true;lastLoaded=new Date();limit=12;render();
-  $('quickLinks').innerHTML=quickLinks.length?quickLinks.map(l=>`<a class="channel-link" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer"><span class="channel-link-label">${channelIcon(l.label)}${esc(l.label)}</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>`).join(''):'<p class="sub" style="margin-top:16px">등록된 채널 주소가 없습니다.</p>';
+  records=result.data;updateMonths();loaded=true;lastLoaded=new Date();limit=12;render();
   setSync('ok',`${lastLoaded.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})} 불러옴`);
   const notices=[],invalid=records.filter(r=>!r.date).length;
   if(invalid)notices.push(`날짜를 확인해야 하는 게시물이 ${invalid}건 있습니다. 전체 기간에서 확인할 수 있어요.`);
@@ -235,7 +239,7 @@ async function loadReport(){
   if(notices.length){$('warning').textContent=notices.join(' ');$('warning').hidden=false;}
  }catch(e){console.error('Report connection failed:',e);setSync('error',loaded?'최신 내역 갱신 실패':'연결을 확인해 주세요');
   if(loaded){$('warning').textContent=`${lastLoaded.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})}에 불러온 내용을 표시합니다. ${errorMessage(e)}`;$('warning').hidden=false;}
-  else{$('posts').innerHTML=state('보고서를 연결하지 못했어요',errorMessage(e),'<button class="btn primary" id="retry">다시 불러오기</button>');$('posts').setAttribute('aria-busy','false');$('resultsText').textContent='데이터 연결 대기';$('channels').innerHTML='<p class="sub">연결 후 발행 현황이 표시됩니다.</p>';$('quickLinks').innerHTML='<p class="sub">연결 후 채널 주소가 표시됩니다.</p>';$('retry').addEventListener('click',loadReport);}
+  else{$('posts').innerHTML=state('보고서를 연결하지 못했어요',errorMessage(e),'<button class="btn primary" id="retry">다시 불러오기</button>');$('posts').setAttribute('aria-busy','false');$('resultsText').textContent='데이터 연결 대기';$('channels').innerHTML='<p class="sub">연결 후 발행 현황이 표시됩니다.</p>';$('retry').addEventListener('click',loadReport);}
  }finally{busy=false;$('refreshButton').disabled=false;disableFilters(!loaded);if(loaded)syncRange();}
 }
 document.querySelectorAll('[data-channel]').forEach(b=>b.addEventListener('click',()=>{setChannel(b.dataset.channel);limit=12;render();}));
@@ -255,5 +259,12 @@ function positionChannelLinks(isMobile){
 const mobileLayout=window.matchMedia('(max-width: 740px)');
 positionChannelLinks(mobileLayout.matches);
 mobileLayout.addEventListener('change',event=>positionChannelLinks(event.matches));
+function renderOperatingChannels(){
+ $('quickLinks').innerHTML=OPERATING_CHANNELS.map(item=>{
+  const url=safeUrl(item.url),label=`<span class="channel-link-label">${channelIcon(item.label)}${esc(item.label)}</span>`;
+  return url?`<a class="channel-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label}<svg aria-hidden="true"><use href="#arrow"/></svg></a>`:`<button type="button" class="channel-link" disabled aria-label="${esc(item.label)} · 주소 준비 중">${label}</button>`;
+ }).join('');
+}
+renderOperatingChannels();
 loadReport();
 </script></body></html>

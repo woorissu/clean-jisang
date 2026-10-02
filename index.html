@@ -105,10 +105,11 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 .metric-links[data-placement="below-library"]{margin-top:24px}
 .channel-link:disabled{width:100%;opacity:1;cursor:default;background:var(--surface);filter:none;text-align:left}
 .date.date-diagonal{position:relative;display:block;flex:0 0 46px;width:46px;height:44px;font-family:"Nanum Myeongjo","Batang","바탕",serif;font-variant-numeric:tabular-nums;line-height:1}
-.date-diagonal .date-month,.date-diagonal .date-day{position:absolute;font-size:14pt;font-weight:400;color:var(--muted);letter-spacing:-.05em}
+.date-diagonal .date-month,.date-diagonal .date-day{position:absolute;font-size:13pt;font-weight:400;color:var(--muted);letter-spacing:-.05em}
 .date-diagonal .date-month{top:2px;left:1px}
 .date-diagonal .date-slash{position:absolute;top:7px;left:22px;width:1px;height:30px;background:var(--line);transform:rotate(35deg)}
 .date-diagonal .date-day{right:1px;bottom:2px}
+.date.date-diagonal{margin-right:6px}
 </style>
 </head><body>
 <svg class="defs" aria-hidden="true"><defs>
@@ -220,7 +221,7 @@ function renderPosts(printAll=false){
  shown.forEach(r=>{
   const month=r.date?r.date.slice(0,7):'invalid';if(month!==lastMonth){html+=`<div class="month-heading">${r.date?`${r.date.slice(0,4)}년 ${+r.date.slice(5,7)}월`:'날짜 확인 필요'}</div>`;lastMonth=month;}
   const config=CHANNELS[r.platform]||{},host=r.url?new URL(r.url).hostname.replace(/^www\./,''):r.invalidUrl?'링크 형식 확인 필요':'링크 미등록';
-  const body=`${r.date?`<time class="date date-diagonal" datetime="${r.date}" aria-label="${+r.date.slice(5,7)}월 ${+r.date.slice(8)}일"><span class="date-month" aria-hidden="true">${r.date.slice(5,7)}</span><span class="date-slash" aria-hidden="true"></span><strong class="date-day" aria-hidden="true">${r.date.slice(8)}</strong></time>`:'<div class="date"><strong>—</strong>날짜</div>'}<div class="post-copy"><div class="post-labels"><span class="platform" style="color:${config.color||'var(--muted)'}">${esc(config.label||r.platform)}</span><small>${r.date?weekOf(r.date)+'주차':'날짜 확인 필요'}</small></div><div class="post-title">${esc(r.title||'제목 미입력 게시물')}</div><span class="post-host">${esc(host)}</span></div>${r.url?'<span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span>':''}`;
+  const body=`${r.date?`<time class="date date-diagonal" datetime="${r.date}" aria-label="${+r.date.slice(5,7)}월 ${+r.date.slice(8)}일"><span class="date-month" aria-hidden="true">${r.date.slice(5,7)}</span><span class="date-slash" aria-hidden="true"></span><span class="date-day" aria-hidden="true">${r.date.slice(8)}</span></time>`:'<div class="date"><strong>—</strong>날짜</div>'}<div class="post-copy"><div class="post-labels"><span class="platform" style="color:${config.color||'var(--muted)'}">${esc(config.label||r.platform)}</span><small>${r.date?weekOf(r.date)+'주차':'날짜 확인 필요'}</small></div><div class="post-title">${esc(r.title||'제목 미입력 게시물')}</div><span class="post-host">${esc(host)}</span></div>${r.url?'<span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span>':''}`;
   html+=r.url?`<a class="post" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(r.title||'제목 미입력 게시물')} · 새 탭에서 원문 보기">${body}</a>`:`<div class="post">${body}</div>`;
  });
  if(!shown.length){const reversed=$('start').value&&$('end').value&&$('start').value>$('end').value;html=state(reversed?'조회 기간을 확인해 주세요':'아직 표시할 게시물이 없어요',reversed?'종료일을 시작일 이후로 선택해 주세요.':records.length?'다른 기간이나 채널을 선택하거나 검색어를 지워보세요.':'콘텐츠가 등록되면 이곳에 발행 내역이 표시됩니다.','<button class="btn" id="emptyReset">전체 내역 보기</button>');}

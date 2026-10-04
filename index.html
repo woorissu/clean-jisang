@@ -111,6 +111,21 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 .date-diagonal .date-slash{position:absolute;top:7px;left:22px;width:1px;height:30px;background:var(--line);transform:rotate(35deg)}
 .date-diagonal .date-day{right:1px;bottom:2px}
 .date.date-diagonal{margin-right:6px}
+/* Keep native date controls inside their columns on narrow mobile screens. */
+@media screen and (max-width:740px){
+ .filter-panel .advanced{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .filter-panel .advanced label{min-width:0;max-width:100%}
+ .filter-panel .advanced input,.filter-panel .advanced select{display:block;width:100%;min-width:0;max-width:100%}
+ .filter-panel .advanced input[type="date"]{min-inline-size:0;inline-size:100%;max-inline-size:100%;padding-inline:6px;-webkit-appearance:none;appearance:none}
+ .filter-panel .advanced input[type="date"]::-webkit-datetime-edit{min-width:0;padding:0}
+ .filter-panel .advanced input[type="date"]::-webkit-date-and-time-value{min-width:0;text-align:left}
+ .filter-panel .advanced .btn{grid-column:1/-1;justify-self:end}
+ .topbar{flex-wrap:wrap}.topbar .actions{margin-left:auto}
+ .metric-channels .channel-row>span:first-child{min-width:0;white-space:normal;overflow-wrap:anywhere}
+}
+@media screen and (max-width:359px){
+ .filter-panel .advanced .date-field{grid-column:1/-1}
+}
 </style>
 </head><body>
 <svg class="defs" aria-hidden="true"><defs>
@@ -143,7 +158,7 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 </div><div class="warning" id="warning" role="alert" hidden></div>
 <section class="panel filter-panel" id="filters" aria-labelledby="filterTitle"><h2 id="filterTitle">조회 조건</h2>
 <div class="filter-row"><label><span class="sr-only">조회 월</span><select id="month"><option value="">전체 기간</option></select></label><label class="search"><svg aria-hidden="true"><use href="#search"/></svg><span class="sr-only">제목 또는 링크 검색</span><input id="searchInput" type="search" placeholder="제목이나 링크로 검색" autocomplete="off"></label></div>
-<details><summary>기간 · 주차 상세 설정<svg aria-hidden="true"><use href="#chevron"/></svg></summary><div class="advanced"><label>빠른 선택<select id="preset"><option value="">직접 선택</option><option value="last7">최근 7일</option><option value="thisMonth">이번 달</option><option value="prevMonth">지난달</option></select></label><label>주차<select id="week"><option value="">전체 주차</option><option value="1">1주차</option><option value="2">2주차</option><option value="3">3주차</option><option value="4">4주차</option><option value="5">5주차</option><option value="6">6주차</option></select></label><label>시작일<input id="start" type="date"></label><label>종료일<input id="end" type="date"></label><button class="btn" id="reset">필터 초기화</button></div></details>
+<details><summary>기간 · 주차 상세 설정<svg aria-hidden="true"><use href="#chevron"/></svg></summary><div class="advanced"><label>빠른 선택<select id="preset"><option value="">직접 선택</option><option value="last7">최근 7일</option><option value="thisMonth">이번 달</option><option value="prevMonth">지난달</option></select></label><label>주차<select id="week"><option value="">전체 주차</option><option value="1">1주차</option><option value="2">2주차</option><option value="3">3주차</option><option value="4">4주차</option><option value="5">5주차</option><option value="6">6주차</option></select></label><label class="date-field">시작일<input id="start" type="date"></label><label class="date-field">종료일<input id="end" type="date"></label><button class="btn" id="reset">필터 초기화</button></div></details>
 </section>
 <div class="workspace" id="contentLibrary">
 <section class="panel"><div class="panel-heading"><div><h2>콘텐츠 라이브러리</h2><p>게시물을 선택하면 원문으로 이동합니다.</p></div><span class="badge">발행 기록</span></div>

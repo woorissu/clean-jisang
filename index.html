@@ -164,7 +164,7 @@ summary{font-size:13px;min-height:32px}.advanced label{font-size:12px}.advanced{
 </section>
 <div class="workspace" id="contentLibrary">
 <section class="panel"><div class="panel-heading"><div><h2>콘텐츠 라이브러리</h2><p>게시물을 선택하면 원문으로 이동합니다.</p></div><span class="badge">발행 기록</span></div>
-<div class="library-tabs"><div class="tabs" role="group" aria-label="채널 선택"><button class="tab" data-channel="all" aria-pressed="false"><svg class="channel-icon" aria-hidden="true"><use href="#grid"/></svg>전체<small id="nAll"></small></button><button class="tab" data-channel="블로그" aria-pressed="true"><svg class="channel-icon channel-icon-blog" aria-hidden="true"><use href="#brand-blog"/></svg>블로그<small id="nBlog"></small></button><button class="tab" data-channel="인스타" aria-pressed="false"><svg class="channel-icon channel-icon-instagram" aria-hidden="true"><use href="#brand-instagram"/></svg>인스타<small id="nInsta"></small></button><button class="tab" data-channel="페북" aria-pressed="false"><svg class="channel-icon channel-icon-facebook" aria-hidden="true"><use href="#brand-facebook"/></svg>페이스북<small id="nFb"></small></button></div>
+<div class="library-tabs"><div class="tabs" role="group" aria-label="채널 선택"><button class="tab" data-channel="all" aria-pressed="true"><svg class="channel-icon" aria-hidden="true"><use href="#grid"/></svg>전체<small id="nAll"></small></button><button class="tab" data-channel="블로그" aria-pressed="false"><svg class="channel-icon channel-icon-blog" aria-hidden="true"><use href="#brand-blog"/></svg>블로그<small id="nBlog"></small></button><button class="tab" data-channel="인스타" aria-pressed="false"><svg class="channel-icon channel-icon-instagram" aria-hidden="true"><use href="#brand-instagram"/></svg>인스타<small id="nInsta"></small></button><button class="tab" data-channel="페북" aria-pressed="false"><svg class="channel-icon channel-icon-facebook" aria-hidden="true"><use href="#brand-facebook"/></svg>페이스북<small id="nFb"></small></button></div>
 </div>
 <div class="results-meta"><span id="resultsText" aria-live="polite">발행 내역을 확인하고 있어요</span><label><span class="sr-only">게시물 정렬</span><select id="sort"><option value="desc">최신순</option><option value="asc">오래된순</option></select></label></div>
 <div id="posts" aria-busy="true"></div><div class="list-end" id="listEnd" hidden><span id="endText"></span><button class="btn" id="more" hidden>게시물 더 보기</button></div></section>
@@ -182,7 +182,7 @@ const OPERATING_CHANNELS=[
  {label:'인스타그램',url:''},
  {label:'페이스북',url:''}
 ];
-let records=[],channel='블로그',filtered=[],limit=12,loaded=false,busy=false,lastLoaded=null;
+let records=[],channel='all',filtered=[],limit=12,loaded=false,busy=false,lastLoaded=null;
 const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 function safeUrl(value){try{const u=new URL(String(value).trim());return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}}
 function iso(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
